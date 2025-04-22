@@ -5,6 +5,11 @@ function App() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    canvas.style.background = "pink";
+
     const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
@@ -35,7 +40,7 @@ function App() {
     ctx.stroke();
   }, []);
 
-  return <canvas ref={canvasRef} width={400} height={300}/>
+  return <canvas ref={canvasRef} width={400} height={300} style={{ display: "block" }}/>
 }
 
 export default App;
