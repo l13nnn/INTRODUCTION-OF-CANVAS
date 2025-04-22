@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const CanvasShapes = () => {
+function App() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -38,4 +38,4 @@ const CanvasShapes = () => {
   return <canvas ref={canvasRef} width={400} height={300}/>
 }
 
-export default CanvasShapes;
+export default App;
